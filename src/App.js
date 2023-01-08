@@ -1,4 +1,6 @@
 import "./categories.styles.scss";
+import Categories from "./components/categories.component";
+
 const App = () => {
   const catagories = [
     {
@@ -27,22 +29,7 @@ const App = () => {
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
-  return (
-    <div className="categories-container">
-      {!!catagories &&
-        catagories.map(({ title }) => {
-          return (
-            <div className="category-container">
-              <div className="background-image" />
-              <div className="category-body-container">
-                <h2>{title}</h2>
-                <p>Shop Now</p>
-              </div>
-            </div>
-          );
-        })}
-    </div>
-  );
+  return <Categories categories={catagories} />;
 };
 
 export default App;
